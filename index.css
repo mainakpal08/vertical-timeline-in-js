@@ -1,0 +1,370 @@
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}AC
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: white;
+  padding-top: 10px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+small {
+  color: #888888;
+}
+
+@media only screen and (max-width: 670px) {
+  h2 {
+    font-size: 15px;
+  }
+}
+
+.page-header {
+  text-align: center;
+  padding-left: 10%;
+  padding-right: 10%;
+  border-bottom: 1px solid #777;
+}
+
+.top-padding1 {
+  margin-top: 265px;
+}
+
+.top-padding2 {
+  margin-top: 840px;
+}
+
+.top-padding3 {
+  margin-top: 1410px;
+}
+
+
+.top-padding4 {
+  margin-top: 1600px;
+}
+
+.top-padding5 {
+  margin-top: 2000px;
+}
+
+.timeline-article {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+@media only screen and (max-width: 570px) {
+  .timeline-article {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 20px 0;
+  }
+}
+
+.timeline-article .cd-timeline__block {
+  max-width: 99%;
+  margin-top: 1em;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;  
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-is-hidden {
+    visibility: hidden;
+  }
+}
+
+/* -------------------------------- 
+Resource style 
+-------------------------------- */
+
+.cd-timeline {
+  overflow: hidden;
+  margin: 2em auto;
+}
+
+.cd-timeline__container {
+  position: relative;
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2em 0;
+}
+
+/*This will display our vertical time line */
+.cd-timeline__container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 18px;
+  height: 100%;
+  width: 4px;
+  background: black;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline {
+    margin-top: 3em;
+    margin-bottom: 3em;
+  }
+  .cd-timeline__container::before {
+    left: 50%;
+    margin-left: -2px;
+  }
+}
+
+.cd-timeline__block {
+  position: relative;
+}
+
+.cd-timeline__block:after {
+  /* clearfix */
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.cd-timeline__block:first-child {
+  margin-top: 0;
+}
+
+.cd-timeline__block:last-child {
+  margin-bottom: 0;
+}
+
+.cd-timeline__content img{
+  width: 150px;
+  height: 150px;
+}
+
+@media only screen and (max-width: 470px) {
+  .cd-timeline__content img{
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline__block {
+    margin: 4em 0;
+  }
+}
+
+.cd-timeline__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px white, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.cd-timeline__img img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  margin-left: -12px;
+  margin-top: -12px;
+}
+
+.cd-timeline__img.cd-timeline__img--dot {
+  background: blue;
+}
+
+.cd-timeline__img.cd-timeline__img--nope {
+  display: none;
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline__img {
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    margin-left: -30px;
+    transform: translateZ(0);
+  }
+  .cd-timeline__img.cd-timeline__img--bounce-in {
+    visibility: visible;
+    animation: cd-bounce-1 0.6s;
+  }
+}
+
+@keyframes cd-bounce-1 {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.cd-timeline__content {
+  position: relative;
+  margin-left: 40px;
+  background: white;
+  border-radius: 0.75em;
+  padding: 1em;
+  box-shadow: inset 0px 3px 0px 4px #5d7180b3;
+}
+
+.cd-timeline__content:after {
+  /* clearfix */
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+/* triangle next to content block for left side block */
+.cd-timeline__content::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid #5d7180b3;
+}
+
+.cd-timeline__content h2 {
+  color: #303e49;
+}
+
+@media only screen and (min-width: 768px) {
+  .cd-timeline__content h2 {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1170px) {
+  .cd-timeline__content {
+    margin-left: 0;
+    padding: 1.6em;
+    width: 90%;
+    transform: translateZ(0);
+  }
+
+  /*for left side symbol (down)*/
+  .cd-timeline__content::before {
+    top: 11.1em;
+    left: 100%;
+    border-color: transparent;
+    border-left: 18px solid #5d7180b3;
+  }
+
+  /*for left side symbol (ups)*/
+  .triangle__content::before {
+    top: 10px;
+    left: 100%;
+    border-color: transparent;
+    border-left-color: #5d7180b3;
+  }
+
+  .cd-timeline__block:nth-child(even) .cd-timeline__content {
+    float: right;
+    margin-top: -16px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .cd-timeline__block:nth-child(even) .cd-timeline__content {
+    float: right;
+    margin-top: 0;
+  }
+}
+
+/*For right side*/
+.cd-timeline__block:nth-child(even) .cd-timeline__content::before {
+  top: 11.1em;
+  left: auto;
+  right: 100%;
+  border-color: transparent;
+  border-right: 15px solid #5d7180b3;
+}
+
+.cd-timeline__block:nth-child(even) .triangle__content::before {
+  top: 10px;
+  left: auto;
+  right: 100%;
+  border-color: transparent;
+  border-right: 18px solid #5d7180b3;
+}
+
+.cd-timeline__block:nth-child(even) .cd-timeline__date {
+  left: auto;
+  right: 122%;
+  text-align: right;
+}
+
+.cd-timeline__content.cd-timeline__content--bounce-in {
+  visibility: visible;
+  animation: cd-bounce-2 0.6s;
+}
+
+/* This will animate the even child of block on big screen */
+@media only screen and (min-width: 1170px) {
+  .cd-timeline__block:nth-child(even) .cd-timeline__content.cd-timeline__content--bounce-in {
+    animation: cd-bounce-2-inverse 0.6s;
+  }
+}
+
+@keyframes cd-bounce-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes cd-bounce-2-inverse {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateX(-20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
